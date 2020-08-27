@@ -1,0 +1,39 @@
+<div class="conatiner-fluid pt-5" id="contact">
+  <div class="container pb-5">
+    <h2 class="pb-3 pt-2"><i class="ion-ios-contact"></i> Contact</h2>
+    {% for message in app.flashes('message') %}
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{ message }}
+    </div>
+    {% endfor %}
+    {{ form_start(form) }}
+    <div class="row">
+      <div class="col-md-4">
+        {{ form_row(form.prenom) }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        {{ form_row(form.nom) }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        {{ form_row(form.email) }}
+      </div>
+    </div>
+    {{ form_widget(form) }}
+    <button type="submit" class="btn-maron">
+      <i class="ion-android-share"></i> Envoyer
+    </button>
+    {{ form_end(form) }}
+  </div>
+</div>

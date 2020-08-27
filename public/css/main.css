@@ -1,0 +1,448 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Constanian, merriweather, sans-serif;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: Constanian, serif;
+}
+.spacer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.icon-xs {
+  font-size: 25px;
+}
+
+.icon-xxs {
+  font-size: 20px;
+}
+
+.avatar-xs {
+  height: 25px;
+  width: 25px;
+}
+
+nav .active {
+  background-color: #c9a685 !important;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.modal {
+  z-index: 6000;
+}
+
+/**************************************************************************
+* home 
+***************************************************************************/
+#header {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Algerian, serif;
+}
+
+.user-box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: Algerian;
+}
+
+.user-box img {
+  border-radius: 50%;
+  width: 280px;
+  border: 2px solid #6caed5;
+}
+
+.user-box h3 {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.user-box p {
+  color: #ffffff;
+}
+
+.scroll-btn {
+  bottom: 30px;
+  border: 1px solid #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 10px 20px;
+  border-radius: 30px;
+}
+
+.scroll-bar span {
+  border: 2px solid #ffffff;
+  font-size: 10px;
+  border-radius: 30px;
+}
+
+.scroll-bar {
+  animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.social-icon {
+  position: absolute;
+  left: 48%;
+  transform: translateX(-40%);
+  top: 78%;
+}
+.social-icon ul {
+  position: relative;
+}
+.social-icon ul li {
+  float: left;
+  width: 37px;
+}
+.social-icon a i {
+  color: #fff;
+  font-size: 30px;
+}
+
+/***********************************************************
+* Navbar
+*********************************************************** */
+.navbar {
+  top: 0% !important;
+  position: sticky !important;
+  z-index: 1;
+  background: #fff !important;
+  z-index: 5000;
+}
+
+.navbar ul li a {
+  font-family: Constanian, serif;
+}
+.img-logo {
+  width: 140px;
+  height: 50px;
+}
+
+/************************************************************
+* About 
+**************************************************************/
+#about {
+  font-family: Constanian, serif;
+}
+#about .profile-img {
+  padding-bottom: 30px;
+  border: 20px solid #c9a685;
+  width: 90%;
+}
+
+#about .profile-img img {
+  width: 105%;
+  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+  margin-top: -50px;
+  margin-left: 30px;
+  height: 410px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.btn-maron {
+  color: #000;
+  background: #c8a584;
+  border-radius: 10px;
+}
+
+/**************************************************************
+* Diplome 
+***************************************************************/
+
+#diplomes {
+  position: relative;
+}
+
+#diplomes .diplomes-list .nav {
+  display: inline-block;
+  margin: 0;
+}
+
+#diplomes .diplomes-list .nav li {
+  margin: 0 40px 0 0;
+  float: left;
+  font-size: 15px;
+  color: #070707;
+  line-height: 16px;
+  cursor: pointer;
+  font-family: "Poppins", helvetica;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  z-index: 2;
+}
+
+#diplomes .diplomes-list .nav li:hover,
+#diplomes .diplomes-list .nav li.filter-active {
+  color: #b8a07e;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#diplomes .diplomes-container {
+  display: inline-block;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.diplomes-thumbnail {
+  margin-bottom: 30px;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.diplomes-thumbnail img {
+  max-width: 100%;
+}
+
+/* ************************************************************
+* Formation
+***************************************************************/
+#formation {
+  font-family: Constanian, serif;
+}
+#formation h3 {
+  margin-bottom: 30px;
+}
+
+.timeline {
+  list-style-type: none;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  background: #c8a584;
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  width: 10px;
+  height: 100%;
+  z-index: 1;
+}
+
+.timeline li {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.timeline li::before {
+  z-index: 1;
+  content: "";
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  border: 2px solid #c8a584;
+  width: 45px;
+  height: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  left: 20px;
+  margin-top: 5px;
+}
+
+.timeline li h5 {
+  background: #c8a584;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px 0px 5px 20px;
+  font-size: 15px;
+}
+
+.timeline li h5 span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feeling {
+  color: #b8a07e;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.modal-orange {
+  background-color: #c9a685 !important;
+}
+/* *****************************************************
+* Compétences ou skills
+********************************************************/
+#skill {
+  font-family: Constanian, serif;
+  background: url(../images/bg-skill.svg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.anime-info {
+  animation: infographie 5s ease infinite alternate;
+  background: radial-gradient(#c8a584, #000);
+}
+
+@keyframes infographie {
+  to {
+    width: 60%;
+  }
+}
+
+.anime-web {
+  animation: web 5s ease infinite alternate;
+  background: radial-gradient(#c8a584, #000);
+}
+
+@keyframes web {
+  to {
+    width: 90%;
+  }
+}
+
+.anime-mobile {
+  animation: mobile 5s ease infinite alternate;
+  background: radial-gradient(#c8a584, #000);
+}
+
+@keyframes mobile {
+  to {
+    width: 70%;
+  }
+}
+/* *****************************************************
+* University
+********************************************************/
+#university {
+  font-family: Constanian, serif;
+  background: url(../images/bg-skill.svg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* *****************************************************
+* Contact
+********************************************************/
+#contact {
+  font-family: Constanian, serif;
+}
+
+#contact_message {
+  height: 150px;
+}
+
+/* *****************************************************
+* Footer
+********************************************************/
+#footer {
+  background: #c8a584;
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+}
+
+#footer a {
+  color: #000;
+}
+
+/* *****************************************************
+* Responsive
+********************************************************/
+
+@media (max-width: 600px) {
+  #header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .user-box img {
+    width: 200px;
+  }
+
+  .social-icon {
+    top: 74%;
+    left: 42%;
+  }
+
+  #about .profile-img img {
+    width: 100%;
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+    height: 410px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  #skill {
+    background: url(../images/bg-skill.svg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  #header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .user-box h3 {
+    font-size: 20px;
+  }
+
+  #about .profile-img img {
+    width: 100%;
+    margin-left: 0px;
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+    height: 440px;
+    object-fit: cover;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+
+  #about .profile-img {
+    padding-bottom: 0px;
+  }
+
+  #skill {
+    background: url(../images/bg-skill.svg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
