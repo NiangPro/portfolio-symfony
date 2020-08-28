@@ -1,22 +1,21 @@
 <?php
 
-namespace App\MyClass;
+namespace App;
 
 class Modal
 {
-    private $id;
-    private $title;
-    private $imgName;
+    private string $id;
+    private string $imgName;
 
-    public function __construct($id, $imgName, $title)
+    public function __construct($id, $imgName)
     {
         $this->id = $id;
         $this->imgName = $imgName;
-        $this->title = $title;
     }
-    public function lunch()
+    public function create($url)
     {
-        echo '
+        echo
+            '
             <div
                 class="modal fade"
                 id="' . $this->id . '"
@@ -28,7 +27,7 @@ class Modal
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content modal-orange">
                     <div class="modal-header">
-                        <h4 class="modal-title w-100" id="myModalLabel"> Application ' . $this->title . '</h4>
+                        <h4 class="modal-title w-100" id="myModalLabel"> Application ' . $this->imgName . '</h4>
                         <button
                         type="button"
                         class="close"
@@ -39,7 +38,7 @@ class Modal
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img src="/images/projets/' . $this->imgName . '" alt="' . $this->title . '"
+                        <img src="' . $url . '" alt="' . $this->imgName . '"
                         width="100%">
                     </div>
                     </div>

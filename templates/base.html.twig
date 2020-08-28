@@ -14,14 +14,21 @@
       asset("/css/magnific-popup.css")
     }}" /> <link rel="stylesheet" href="{{
       asset("/ionicons/css/ionicons.min.css")
-    }}" /> <link rel="stylesheet" href="{{
+    }}" />
+    <link rel="stylesheet" href="{{
+              asset("/css/responsive.css")
+            }}" />
+             <link rel="stylesheet" href="{{
       asset("/css/main.css")
-    }}" /> {% block stylesheets %}{% endblock %}
+    }}" /> 
+    
+        <!-- Styles -->
+    {% block stylesheets %}{% endblock %}
   </head>
   <body>
     {% block body %}{% endblock %} 
 
-    <!-- Mes Modals -->
+    <!-- Modal -->
     {% include "niangpro/modal.html.twig" %}
 
     <!-- les scripts -->

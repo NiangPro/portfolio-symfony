@@ -3,10 +3,10 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Modal;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\MyClass\Modal;
 
 class NiangproController extends AbstractController
 {
@@ -39,28 +39,27 @@ class NiangproController extends AbstractController
             $form = $this->createForm(ContactType::class);
         }
 
-        // Les modals
-        $modalGrossiste = new Modal("grossiste", "grossiste.png", "Grossiste");
-        $modalBiblio = new Modal("biblio", "biblio.png", "Bibliothèque");
-        $modalCovid = new Modal("covid", "covid.png", "Covid-19");
-        $modalPortfolio = new Modal("portfolio", "portfolio.png", "Mon Portfolio");
-        $modalEducatif = new Modal("educatif", "educatif.png", "Réseau éducatif");
-        $modalMeme = new Modal("meme", "meme.png", "Générateur de Mémes");
-        $modalFilm = new Modal("film", "film.png", "Annuaire de film");
-        $modalInvader = new Modal("invader", "invader.png", "Space Invaders");
+        // LES OBJETS MODAL
+        $biblio = new Modal("biblio", "Bibliothèque");
+        $modalGrossiste = new Modal("grossiste", "Grossiste");
+        $modalCovid = new Modal("covid", "Covid-19");
+        $modalPortfolio = new Modal("portfolio", "Mon Portfolio");
+        $modalEducatif = new Modal("educatif", "Réseau éducatif");
+        $modalMeme = new Modal("meme", "Générateur de Mémes");
+        $modalFilm = new Modal("film", "Annuaire de film");
+        $modalInvader = new Modal("invader", "Space Invaders");
 
 
         return $this->render('niangpro/index.html.twig', [
             'form' => $form->createView(),
-            'modal_grossiste' => $modalGrossiste,
-            'modal_biblio' => $modalBiblio,
-            'modal_covid' => $modalCovid,
-            'modal_educatif' => $modalEducatif,
-            'modal_meme' => $modalMeme,
-            'modal_portfolio' => $modalPortfolio,
-            'modal_film' => $modalFilm,
-            'modal_invader' => $modalInvader
-
+            'biblio' => $biblio,
+            'grossiste' => $modalGrossiste,
+            'covid' => $modalCovid,
+            'educatif' => $modalEducatif,
+            'meme' => $modalMeme,
+            'portfolio' => $modalPortfolio,
+            'film' => $modalFilm,
+            'invader' => $modalInvader
         ]);
     }
 }

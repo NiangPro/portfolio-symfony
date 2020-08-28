@@ -1,0 +1,17 @@
+@media (max-width: 600px) {
+  #apropos .profile-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  #apropos .profile-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  #apropos .profile-img {
+    width: 100%;
+  }
+}
